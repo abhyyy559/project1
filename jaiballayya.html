@@ -10,6 +10,65 @@
     <div class="container">
         <h1>Hello World</h1>
     </div>
+
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">Brand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .navbar {
+            background-color: #333;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            top: -100px; /* Start hidden */
+        }
+
+        .navbar.show {
+            top: 0; /* Slide down */
+        }
+
+        .navbar-toggler {
+            background-color: #555;
+            border: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            padding: 15px;
+        }
+    </style>
+
+    <script>
+        const navbar = document.querySelector('.navbar');
+        const toggler = document.querySelector('.navbar-toggler');
+
+        toggler.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+        });
+    </script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
